@@ -1,0 +1,6 @@
+Proje geliştirilirken aşağıdaki uygulama ve sürümleri kullanılmıştır.
+
+Anaconda Navigator: 1.10.0
+Spyder: 4.1.5
+Keras: 2.4.3
+Pyqt5

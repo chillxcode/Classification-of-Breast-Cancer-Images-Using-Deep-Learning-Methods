@@ -1,0 +1,79 @@
+Uygulamanın çalışmasında sıkıntı yaşanmaması için klasörleme şu şekilde yapılması gerekmektedir.
+
+-Proje Dizini
+    -bach
+        -Benign
+            *.tif
+        -InSitu
+        -Invasive
+        -Normal
+    -bioimaging
+        -Benign
+        -InSitu
+        -Invasive
+        -Normal
+    -models
+        -DenseNet201
+        -InceptionResNetV2
+        -InceptionV3
+        -NASNetLarge
+        -ResNet152V2
+        -VGG16
+        -VGG19
+        -Xception
+    -predict
+        -Benign
+        -InSitu
+        -Invasive
+        -Normal
+    -predict_single
+        -folder
+    -test
+        -75
+            -Benign
+                *.png
+            -InSitu
+            -Invasive
+            -Normal
+        -128
+            -Benign
+            -InSitu
+            -Invasive
+            -Normal
+        -256
+            -Benign
+            -InSitu
+            -Invasive
+            -Normal
+    -train
+        -75
+            -Benign
+            -InSitu
+            -Invasive
+            -Normal
+        -128
+            -Benign
+            -InSitu
+            -Invasive
+            -Normal
+        -256
+            -Benign
+            -InSitu
+            -Invasive
+            -Normal
+    AI.py
+    CustomFuncs.py
+    DatasetFuncs.py
+    main.py
+    mplwidget.py
+    NormalizeStaining.py
+    RollingWindow.py
+    run.py
+
+
+Bu klasörlemeler yapıldıktan sonra Database.txt dosyasında bulunan linklerden veri setleri indirilir.
+Sırasıyla 'bach' ve 'bioimaging' klasörleri içine .tif uzantılı şekilde kopyalanır.
+Train ve test patchlerinin oluşması için run.py uzantılı dosya çalıştırılır.
+75, 128, 256 olmak üzere her patch size ve model için run.py dosyasının çalıştırılması gerekmektedir.
+Tüm patchler oluştuktan sonra modellerin son halleri de 'models' klasörü içine kayıt edilmektedir.
+'run.py' dosyası ile işimiz bittikten sonra 'main.py' dosyası çalıştırılarak arayüz üzerinden istediğiniz işlemi yapabilirsiniz.
